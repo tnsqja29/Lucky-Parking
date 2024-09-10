@@ -1,0 +1,378 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'TheJamsil5Bold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'freesenation';
+    src: url(../font/FreesentationVF.ttf);
+}
+@font-face {
+    font-family: 'TheJamsil4regurlar';
+    src: url(../font/The\ Jamsil\ 3\ Regular.ttf);
+}
+
+:root {
+    --main--color: #508E52;
+    --sub--color: #E6E6E6;
+    --bg--color: #F9F9F9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+}
+
+li {
+    list-style: none;
+}
+
+span {
+    display: block;
+}
+
+
+/* scroll bar */
+::-webkit-scrollbar {
+    width: 10px;  
+}
+::-webkit-scrollbar-thumb {
+    background: var(--main--color);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+    background: rgb(80, 142, 82, 0.2);
+}
+
+
+
+/* header */
+
+header {
+    width: 100%;
+    height: 80px;
+    /* background-color: rgba(0, 0, 0, 0.8); */
+    background-color: rgba(255, 255, 255, 0.4);
+    position: fixed;
+    z-index: 10;
+    font-family: 'freesenation';
+}
+
+header .header-inner {
+    max-width: 1600px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+header .header-inner .logo {
+    width: 239px;
+    height: 60px;
+    background: url(../images/com/logoB.svg)no-repeat center/cover;
+}
+
+header .header-inner .main-menu {
+    display: flex;
+    width: 50%;
+    text-align: center;
+}
+header .header-inner .main-menu .menu-item {
+    width: 100%;
+    position: relative;
+    padding-bottom: 3px;
+    /* 임의로 수정 */
+}
+
+header .header-inner .main-menu .menu-item.active {
+    border-bottom: 4px solid var(--main--color);
+    padding-bottom: 0;
+}
+
+header .header-inner .main-menu .menu-item .menu-link{
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    font-weight: bold;
+    color: #000;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+header .header-inner .main-menu .menu-item .menu-link:hover {
+    color: var(--main--color);
+}
+
+header .header-inner .header-util {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+header .header-inner .header-util .login {
+    padding: 0 10px;
+    border-right: 1px solid #000;
+    color: #000;
+    font-size: 18px;
+}
+
+header .header-inner .header-util .register {
+    padding: 0 10px;
+    color: #000;
+    font-size: 18px;
+}
+
+/* main */
+main {
+    width: 100%;
+    background-color: var(--bg--color);
+    overflow: hidden;
+}
+
+main .main-cont {
+    width: 100%;
+    height: 3800px;
+    position: relative;
+}
+
+main .main-cont .fixed-bg {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+}
+
+main .main-cont .fixed-bg.bottom {
+    top: unset;
+   bottom: 0;
+}
+
+main .main-cont .fixed-bg.scrolled {
+    position: fixed;
+}
+
+main .main-cont .main-green {
+    width: 100%;
+    height: 100%; 
+    background-color: #fff;
+}
+
+
+
+main .main-cont .main-bg {
+    position: absolute;
+    background-color: #edf3ed;
+    opacity: 0.9;
+    width: 100%;
+    margin-left: 60px;
+    height: 700px;
+    border-radius: 100px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: -20px 30px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+
+
+main .main-cont .main-bg div {
+    position: absolute;
+    opacity: 0;
+    padding: 140px 200px 100px 0px;
+    height: 100%;
+    right: 30%;
+}
+
+main .main-cont .main-bg  p {
+    text-align: right;
+    margin-left: auto;
+    font-family: 'TheJamsil4regurlar';
+
+
+}
+
+main .main-cont .main-bg .text-black {
+    font-family: 'freesenation';
+}
+
+.text-green {
+    font-size: 45px;
+    color: var(--main--color);
+    margin-top: 60px;
+}
+
+.text-black {
+    font-size: 70px;
+    font-family: 'freesenation';
+    margin-top: 75px;
+}
+
+main .main-cont .main-bg .first .text-green {
+    font-size: 45px;
+    color: var(--main--color);
+    margin-top: 60px;
+}
+
+main .main-cont .main-bg .first .text-black {
+    font-size: 70px;
+    font-family: 'freesenation';
+    margin-top: 75px;
+}
+
+
+main .main-cont .main-bg .first .text-green:first-child {
+    margin-top: 0px;
+}
+
+main .main-cont .main-bg .first.active {
+    opacity: 1;
+    transition: .5s;
+}
+
+main .main-cont .main-bg .second {
+    opacity: 0;
+    transition: .5s;
+
+}
+
+main .main-cont .main-bg .second .text-green:first-child {
+    margin-top: 0;
+}
+
+main .main-cont .main-bg .second.active {
+    opacity: 1;
+    transition: .5s;
+
+}
+main .main-cont .main-bg .third {
+    opacity: 0;
+}
+main .main-cont .main-bg .third .text-green:first-child {
+    margin-top: 0;
+}
+
+main .main-cont .main-bg .third.active {
+    opacity: 1;
+    transition: .5s;
+}
+main .main-cont .main-bg .fourth {
+    opacity: 0;
+}
+
+main .main-cont .main-bg .fourth .text-green:first-child {
+    margin-top: 0;
+}
+main .main-cont .main-bg .fourth.active {
+    opacity: 1;
+    transition: .5s;
+}
+
+main .main-cont .mo-scroll {
+    position: absolute;
+    right: 160px;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    
+
+}
+
+
+
+main .main-cont .mo-scroll .mock-up {
+    position: absolute;
+    width: 446px;
+    height: 3693px;
+    background-image: url(../images/service/Group\ 8900.png);
+    right: 0;
+    top: 100px;
+    
+}
+
+
+
+/* footer */
+footer {
+    width: 100%;
+    height: 150px;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.15);
+}
+footer .footer-inner {
+    max-width: 1600px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+footer .footer-inner .blogo {
+    background: url(../images/com/logoB.svg)no-repeat center/cover;
+    width: 239px;
+    height: 60px;
+}
+footer .footer-inner .footer-cont .mail-box {
+    font-size: 20px;
+}
+footer .footer-inner .footer-cont .footer-list {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 22px;
+}
+footer .footer-inner .footer-cont .footer-list .footer-item {
+    width: 100%;
+}
+footer .footer-inner .footer-cont .footer-list .footer-item .footer-link {
+    width: 100%;
+    color: #000;
+    text-align: center;
+    border-right: 1px solid #000;
+}
+footer .footer-inner .footer-cont .footer-list .footer-item:last-child .footer-link {
+    border: none;
+    font-weight: bold;
+}
+footer .footer-inner .share-box .sns-btn {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+footer .footer-inner .share-box .sns-btn .sns-item .sns-link {
+    background: url(../images/com/share.svg) no-repeat center/cover;
+    width: 45px;
+    height: 45px;
+}
+footer .footer-inner .share-box .sns-btn .sns-item:nth-child(2) .sns-link {
+    background: url(../images/com/blog.svg);
+}
+footer .footer-inner .share-box .sns-btn .sns-item:nth-child(3) .sns-link {
+    background: url(../images/com/instagram.svg);
+}
+footer .footer-inner .share-box .sns-btn .sns-item:nth-child(4) .sns-link {
+    background: url(../images/com/facebook.svg);
+}
+footer .footer-inner .share-box .sns-btn .sns-item:nth-child(5) .sns-link {
+    background: url(../images/com/youtube.svg);
+}
+footer .footer-inner .share-box .copy {
+    padding: 0 10px;
+    text-align: center;
+    margin-top: 13px;
+}

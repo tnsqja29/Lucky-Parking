@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucky Parking : 마이페이지</title>
+    <link rel="shortcut icon" href="./images/com/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/my-page.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="./script/my-page.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="./index.html" class="logo"></a>
+            <ul class="main-menu">
+                <li class="menu-item">
+                    <a href="./index.html" class="menu-link">회사소개</a>
+                </li>
+                <li class="menu-item">
+                    <a href="./service.html" class="menu-link">서비스소개</a>
+                </li>
+                <li class="menu-item">
+                    <a href="./costomer.html" class="menu-link">고객지원</a>
+                </li>
+                <li class="menu-item  active">
+                    <a href="#a" class="menu-link">마이페이지</a>
+                </li>
+            </ul>
+            <div class="header-util">
+                <a href="./signIn.html" class="login">로그인</a>
+                <a href="./signUp.html" class="register">회원가입</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="main-inner">
+            <div class="info-box">
+                <ul class="info">
+                    <li class="info-item">
+                        <a href="#a" class="info-link">
+                            <p class="my-info">내 정보</p>
+                            <div class="link-cont">
+                                <div class="icon"></div>
+                                <p>럭키비키걸</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="info-item car">
+                        <a href="#a" class="info-link active">
+                            차량정보
+                        </a>
+                    </li>
+                    <li class="info-item card">
+                        <a href="#a" class="info-link">
+                            카드정보
+                        </a>
+                    </li>
+                    <li class="info-item history">
+                        <a href="#a" class="info-link">
+                            이용내역
+                        </a>
+                    </li>
+                    <li class="info-item price">
+                        <a href="#a" class="info-link">
+                            미납요금
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 차량정보 콘텐츠 -->
+            <div class="car-info-cont active">
+                <form id="car-info-cont">
+                    <p class="car-info-title">차량등록</p>
+                    <div class="car-info-box">
+                        <div class="car-brand">
+                            <p>브랜드</p>
+                            <select id="brand" required>
+                                <option> </option>
+                                <option>브랜드 1</option>
+                                <option>브랜드 2</option>
+                                <option>브랜드 3</option>
+                            </select>
+                        </div>
+                        <div class="car-model">
+                            <p>차량모델</p>
+                            <select id="model" required>
+                                <option> </option>
+                                <option>차량모델 1</option>
+                                <option>차량모델 2</option>
+                                <option>차량모델 3</option>
+                            </select>
+                        </div>
+                        <div class="car-year">
+                            <p>모델연형</p>
+                            <select id="year" required>
+                                <option> </option>
+                                <option>2024년형</option>
+                                <option>2023년형</option>
+                                <option>2022년형</option>
+                            </select>
+                        </div>
+                        <div class="car-number">
+                            <p>차량번호</p>
+                            <input type="text" id="car-number-box" placeholder="전체 차량번호를 입력하여 주세요. (예: 00가 0000)">
+                        </div>
+                    </div>
+                    <div class="car-info-btn">
+                        <input type="submit" value="등록" id="submitBtn" required>
+                        <input type="button" value="취소">
+                    </div>
+                </form>
+            </div>
+            <div class="card-info">
+                <p class="card-info-title">카드사용등록</p>
+                <div class="card-info-box">
+                    <div class="corp-card">
+                        <input type="checkbox" class="cBox">
+                        <p>법인카드</p>
+                    </div>
+                    <p class="title">본인인증</p>
+                    <div class="card-num">
+                        <p class="info-text">카드번호</p>
+                        <div class="input-box">
+                            <input type="text" class="card-text">
+                            <input type="text" class="card-text">
+                            <input type="text" class="card-text">
+                            <input type="text" class="card-text">
+                            <a href="#a" class="mouse-btn"></a>
+                        </div>
+                    </div>
+                    <div class="card-num">
+                        <p class="info-text">유효기간</p>
+                        <div class="input-box">
+                            <select name="month" id="month">
+                                <option value="#">01</option>
+                                <option value="#">02</option>
+                                <option value="#">03</option>
+                                <option value="#">04</option>
+                                <option value="#">05</option>
+                                <option value="#">06</option>
+                                <option value="#">07</option>
+                                <option value="#">08</option>
+                                <option value="#">09</option>
+                                <option value="#">10</option>
+                                <option value="#">11</option>
+                                <option value="#">12</option>
+                            </select>
+                            <select name="year" id="year">
+                                <option value="#">2017</option>
+                                <option value="#">2018</option>
+                                <option value="#">2019</option>
+                                <option value="#">2020</option>
+                                <option value="#">2021</option>
+                                <option value="#">2022</option>
+                                <option value="#">2023</option>
+                                <option value="#">2024</option>
+                            </select>
+                            <p>*표시순서 (MONTH / YEAR) 대로 선택</p>
+                        </div>
+                    </div>
+                    <div class="card-num">
+                        <p class="info-text">카드식별번호</p>
+                        <div class="input-box">
+                            <input type="text" class="iden-text">
+                            <a href="#a" class="mouse-btn"></a>
+                            <p>*카드 뒷면 3자리</p>
+                        </div>
+                    </div>
+                    <div class="card-num last">
+                        <p class="info-text">카드비밀번호</p>
+                        <div class="input-box">
+                            <input type="text" class="secret-text">
+                            <a href="#a" class="mouse-btn"></a>
+                            <p>*4자리</p>
+                        </div>
+                    </div>
+                    <div class="card-btn">
+                        <a href="#a" class="check-btn">확인</a>
+                        <a href="#a" class="cancel-btn">취소</a>
+                    </div>
+                </div>
+            </div>
+            <div class="info-cont">
+                <p class="price-title">미납요금 조회 및 결제</p>
+                <div class="search-num">
+                    <p class="search-num-title">차량 번호 조회</p>
+                    <div class="search-bar">
+                        <form id="searchForm">
+                            <input class="search-text" placeholder="전체 차량번호를 입력하여 주세요. (예: 00가 0000)" type="text">
+                            <button type="submit">조회</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="table-bg">
+                    <table class="search-list">
+                        <thead class="search-menu">
+                            <tr>
+                                <th scope="col">번호</th>
+                                <th scope="col">주차장소</th>
+                                <th scope="col">주차일시</th>
+                                <th scope="col">출차일시</th>
+                                <th scope="col">미납출자료</th>
+                                <th scope="col">가산금</th>
+                                <th scope="col">매출내역</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="7">등록된 정보가 없습니다.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="history-cont">
+                <p class="history-title">
+                    이용내역
+                </p>
+                <div class="history-select-box">
+                    <p class="history-select-title">
+                        조회기간
+                    </p>
+                    <div class="history-select">
+                        <input type="date" id="date" max="2024-09-11" min="2010-09-11" value="2024-09-09">
+                        <!-- <input type="time" id="time" value="13:00"> -->
+                        <p>~</p>
+                        <input type="date" id="date" max="2025-09-11" min="2010-09-11" value="2024-09-09">
+                        <!-- <input type="time" id="time" value="13:00"> -->
+                    </div>
+                    <ul class="date-select">
+                        <li class="date-item active">
+                            <a href="#a" class="date-link">1일</a>
+                        </li>
+                        <li class="date-item">
+                            <a href="#a" class="date-link">1개월</a>
+                        </li>
+                        <li class="date-item">
+                            <a href="#a" class="date-link">3개월</a>
+                        </li>
+                        <li class="date-item">
+                            <a href="#a" class="date-link">당월</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="history-bg">
+                    <table class="history-list">
+                        <thead class="history-menu">
+                            <tr>
+                                <th scope="col">주차장소</th>
+                                <th scope="col">이용일</th>
+                                <th scope="col">이용시간</th>
+                                <th scope="col">이용금액</th>
+                                <th scope="col">결제수단</th>
+                                <th scope="col">취소여부</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- footer -->
+    <footer>
+        <div class="footer-inner">
+            <a href="#a" class="blogo"></a>
+            <div class="footer-cont">
+                <p class="mail-box">
+                    경기 수원시 팔달구 덕영대로 899 3층 E-MAIL. LUCKY@parking.co.kr
+                </p>
+                <ul class="footer-list">
+                    <li class="footer-item">
+                        <a href="#a" class="footer-link">이용안내</a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="#a" class="footer-link">이용약관</a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="#a" class="footer-link">고객정보취급방침</a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="#a" class="footer-link">개인정보취급방침</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="share-box">
+                <ul class="sns-btn">
+                    <li class="sns-item">
+                        <a href="#" class="sns-link"></a>
+                    </li>
+                    <li class="sns-item">
+                        <a href="#" class="sns-link"></a>
+                    </li>
+                    <li class="sns-item">
+                        <a href="#" class="sns-link"></a>
+                    </li>
+                    <li class="sns-item">
+                        <a href="#" class="sns-link"></a>
+                    </li>
+                    <li class="sns-item">
+                        <a href="#" class="sns-link"></a>
+                    </li>
+                </ul>
+                <div class="copy">&copy; LUCKY PARKING. ALL Rights Reserved.</div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

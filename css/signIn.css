@@ -1,0 +1,380 @@
+@charset "UTF-8";
+
+
+/* font */
+/* 포인트 폰트 : 더잠실체 */
+@font-face {
+    font-family: 'TheJamsil5Bold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'freesenation';
+    src: url(../font/FreesentationVF.ttf);
+}
+
+/* root */
+:root {
+    /* 색상 변수 */
+    --main--color: #508E52;
+    --sub--color: #E6E6E6;
+    --bg--color: #F9F9F9;
+
+    /* 폰트 변수 */
+    --point--font: 'TheJamsil5Bold';
+
+}
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'freesenation';
+}
+a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+}
+li {
+    list-style: none;
+}
+span {
+    display: block;
+}
+
+
+/* scroll bar */
+::-webkit-scrollbar {
+    width: 10px;  
+}
+::-webkit-scrollbar-thumb {
+    background: var(--main--color);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+    background: rgb(80, 142, 82, 0.2);
+}
+
+
+/* header */
+header {
+    width: 100%;
+    height: 80px;
+    background-color: rgba(255, 255, 255, 0.4);
+    position: fixed;
+    z-index: 10;
+    font-family: 'freesenation';
+}
+header .header-inner {
+    max-width: 1600px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+header .header-inner .logo {
+    width: 239px;
+    height: 60px;
+    background: url(../images/com/logoB.svg)no-repeat center/cover;
+}
+header .header-inner .main-menu {
+    display: flex;
+    width: 50%;
+    text-align: center;
+}
+header .header-inner .main-menu .menu-item {
+    width: 100%;
+    position: relative;
+    padding-bottom: 3px;
+    /* 임의로 수정 */
+}
+
+header .header-inner .main-menu .menu-item.active {
+    border-bottom: 4px solid var(--main--color);
+    padding-bottom: 0;
+}
+header .header-inner .main-menu .menu-item .menu-link{
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    font-weight: 500;
+    font-size: 20px;
+    color: #000;
+    font-family: 'freesenation';
+}
+header .header-inner .main-menu .menu-item .menu-link:hover {
+    color: var(--main--color);
+}
+header .header-inner .header-util {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-family: 'freesenation';
+}
+
+header .header-inner .header-util .login {
+    padding: 0 10px;
+    border-right: 1px solid #000;
+    color: #000;
+    font-size: 18px;
+}
+
+header .header-inner .header-util .register {
+    padding: 0 10px;
+    color: #000;
+    font-size: 18px;
+}
+
+
+/* signIn */
+main {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--bg--color);
+    padding: 130px 200px;
+}
+.logo-signIn-container {
+    width: 100%;
+    height: 100%;
+    /* background-color: #d8d8d8; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: space-between;
+}
+.m-logo {
+    width: 280px;
+    height: 70px;
+    background: url(../images/com/logoB.svg)no-repeat center/cover;
+    margin: 0 auto;
+    margin-bottom: 70px;
+}
+.signIn-wrapper {
+    width: 100%;
+    height: 500px;
+    /* background-color: #000; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: 1px solid #8D8D8D;
+}
+.dotted-line {
+    position: absolute;
+    width: 0px;
+    height: 80%;
+    background-color: transparent;
+    border-right: 2px dashed #8D8D8D;
+}
+.signIn-left-box,
+.signIn-right-box {
+    width: 50%;
+    height: 100%;
+    /* background-color: rgb(255, 227, 251); */
+    padding: 50px 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-between; */
+    gap: 70px;
+}
+.signIn-text {
+    font-size: 30px;
+    font-weight: bold;
+}
+.content-box {
+    width: 100%;
+    height: 300px;
+    /* background-color: #fff; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+/*** 왼쪽 ***/
+.signIn-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.signIn-form > input {
+    padding: 15px;
+    font-size: 18px;
+}
+.signIn-form > input.sign-btn {
+    padding: 12px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+}
+/* 아이디, 비밀번호 입력창 */
+.sign-in {
+    background-color: transparent;
+    border: 1px solid #8D8D8D;
+    height: 50px;
+}
+/* 자동 로그인 */
+.checkBox > label {
+    display: flex;
+    gap: 5px;
+}
+input#check_btn {
+    display:none;
+}
+input#check_btn + label {
+    cursor:pointer;
+}
+input#check_btn + label > span {
+    vertical-align: middle;
+    padding-left: 5px;
+}
+/* label:before에 체크하기 전 상태 CSS */
+input#check_btn + label::before {
+    content:"";
+    display:inline-block;
+    width:17px;
+    height:17px;
+    border:2px solid var(--main--color);
+    border-radius: 4px;
+    vertical-align:middle;
+}
+/* label:before에 체크 된 상태 CSS */  
+input#check_btn:checked + label::before {
+    content:"";
+    background-color: var(--main--color);
+    border-color: var(--main--color);
+    background-image: url('../images/com/check.svg');
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+/* 로그인 버튼 */
+.sign-btn {
+    background-color: var(--main--color);
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    height: 50px;
+}
+/* 아이디, 비번 찾기, 회원가입 메뉴 */
+.etc-menu {
+    display: flex;
+    gap: 5px;
+    font-size: 16px;
+}
+
+/*** 오른쪽 ***/
+.sns-signIn {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* 아이콘 */
+.sns-signIn > img {
+    width: 50px;
+    height: 50px;
+}
+/* 버튼 배경색 */
+.sns-signIn:nth-child(1) {
+    background-color: #FFEB00;
+}
+.sns-signIn:nth-child(2) {
+    background-color: #00C300;
+}
+.sns-signIn:nth-child(3) {
+    background-color: #fff;
+    border: 1px solid #8D8D8D;
+    overflow: hidden;
+}
+.sns-signIn:nth-child(4) {
+    background-color: #1977F3;
+}
+/* 박스 스타일 */
+.sns-text {
+    width: calc(100% - 50px);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+
+/* footer */
+footer {
+    width: 100%;
+    height: 150px;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.15);
+}
+footer .footer-inner {
+    max-width: 1600px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+footer .footer-inner .blogo {
+    background: url(../images/com/logoB.svg)no-repeat center/cover;
+    width: 239px;
+    height: 60px;
+}
+footer .footer-inner .footer-cont .mail-box {
+    font-size: 20px;
+}
+footer .footer-inner .footer-cont .footer-list {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 22px;
+}
+footer .footer-inner .footer-cont .footer-list .footer-item {
+    width: 100%;
+}
+footer .footer-inner .footer-cont .footer-list .footer-item .footer-link {
+    width: 100%;
+    color: #000;
+    text-align: center;
+    border-right: 1px solid #000;
+}
+footer .footer-inner .footer-cont .footer-list .footer-item:last-child .footer-link {
+    border: none;
+    font-weight: bold;
+}
+footer .footer-inner .share-box .sns-btn {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+footer .footer-inner .share-box .sns-btn .sns-item .sns-link {
+    background: url(../images/com/share.svg) no-repeat center/cover;
+    width: 45px;
+    height: 45px;
+}
+footer .footer-inner .share-box .sns-btn .sns-item:nth-child(2) .sns-link {
+    background: url(../images/com/blog.svg);
+}
+footer .footer-inner .share-box .sns-btn .sns-item:nth-child(3) .sns-link {
+    background: url(../images/com/instagram.svg);
+}
+footer .footer-inner .share-box .sns-btn .sns-item:nth-child(4) .sns-link {
+    background: url(../images/com/facebook.svg);
+}
+footer .footer-inner .share-box .sns-btn .sns-item:nth-child(5) .sns-link {
+    background: url(../images/com/youtube.svg);
+}
+footer .footer-inner .share-box .copy {
+    padding: 0 10px;
+    text-align: center;
+    margin-top: 13px;
+}

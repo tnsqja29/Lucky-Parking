@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucky Parking : 로그인</title>
+    <link rel="shortcut icon" href="./images/com/favicon.ico" type="image/x-icon">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="./script/signIn.js"></script>
+
+    <link rel="stylesheet" href="./css/signIn.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="./index.html" class="logo"></a>
+            <ul class="main-menu">
+                <li class="menu-item">
+                    <a href="./index.html" class="menu-link">회사소개</a>
+                </li>             
+                <li class="menu-item">
+                    <a href="./service.html" class="menu-link">서비스소개</a>
+                </li>
+                <li class="menu-item">
+                    <a href="./costomer.html" class="menu-link">고객지원</a>
+                </li>
+                <li class="menu-item">
+                    <a href="./my-page.html" class="menu-link">마이페이지</a>
+                </li>
+            </ul>
+            <div class="header-util">
+                <a href="./signIn.html" class="login">로그인</a>
+                <a href="./signUp.html" class="register">회원가입</a>
+            </div>
+        </div>
+    </header>
+
+    <!--
+        ============================================
+        ========== 여기다 코딩해 주세요~!! ==========
+        ============================================
+    -->
+    <main>
+        <div class="logo-signIn-container">
+            <!-- 로고 -->
+            <a href="#a" class="m-logo"></a>
+            <!-- 로그인 박스 -->
+            <div class="signIn-wrapper">
+                <div class="dotted-line"></div>
+                <!-- 왼쪽 콘텐츠 -->
+                <div class="signIn-left-box">
+                    <p class="signIn-text">
+                        회원 로그인
+                    </p>
+                    <div class="content-box">
+                        <form class="signIn-form">
+                            <input type="text" placeholder="아이디" class="sign-in">
+                            <input type="password" placeholder="비밀번호" class="sign-in">
+                            <div class="checkBox">
+                                <input type="checkbox" id="check_btn">
+                                <label for="check_btn"><span>자동 로그인</span></label>
+                            </div>
+                            <input type="submit" value="로그인" class="sign-btn">
+                        </form>
+                        <ul class="etc-menu">
+                            <li><a href="#a">아이디 찾기</a></li>
+                            <li>|</li>
+                            <li><a href="#a">비밀번호 찾기</a></li>
+                            <li>|</li>
+                            <li><a href="./signUp.html">회원가입</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 오른쪽 콘텐츠 -->
+                <div class="signIn-right-box">
+                    <p class="signIn-text">
+                        SNS 로그인
+                    </p>
+                    <div class="content-box">
+                        <a href="#a" class="sns-signIn">
+                            <img src="./images/signIn/m-kakao.png" alt="카카오 로그인 아이콘">
+                            <p class="sns-text">카카오 로그인</p>
+                        </a>
+                        <a href="#a" class="sns-signIn">
+                            <img src="./images/signIn/m-naver.png" alt="네이버 로그인 아이콘">
+                            <p class="sns-text">네이버 로그인</p>
+                        </a>
+                        <a href="#a" class="sns-signIn">
+                            <img src="./images/signIn/m-google.png" alt="구글 로그인 아이콘">
+                            <p class="sns-text">구글 로그인</p>
+                        </a>
+                        <a href="#a" class="sns-signIn">
+                            <img src="./images/signIn/m-facebook.png" alt="페이스북 로그인 아이콘">
+                            <p class="sns-text">페이스북 로그인</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+     <!-- footer -->
+     <footer>
+        <div class="footer-inner">
+            <a href="#a" class="blogo"></a>
+            <div class="footer-cont">
+                <p class="mail-box">
+                    경기 수원시 팔달구 덕영대로 899 3층 E-MAIL. LUCKY@parking.co.kr
+                </p>
+                <ul class="footer-list">
+                    <li class="footer-item">
+                        <a href="#a" class="footer-link">이용안내</a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="#a" class="footer-link">이용약관</a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="#a" class="footer-link">고객정보취급방침</a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="#a" class="footer-link">개인정보취급방침</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="share-box">
+                <ul class="sns-btn">
+                    <li class="sns-item">
+                        <a href="#" class="sns-link"></a>
+                    </li>
+                    <li class="sns-item">
+                        <a href="#" class="sns-link"></a>
+                    </li>
+                    <li class="sns-item">
+                        <a href="#" class="sns-link"></a>
+                    </li>
+                    <li class="sns-item">
+                        <a href="#" class="sns-link"></a>
+                    </li>
+                    <li class="sns-item">
+                        <a href="#" class="sns-link"></a>
+                    </li>
+                </ul>
+                <div class="copy">&copy; LUCKY PARKING. ALL Rights Reserved.</div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
