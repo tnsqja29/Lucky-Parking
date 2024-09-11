@@ -836,6 +836,7 @@ footer .footer-inner .footer-cont .footer-list {
     display: flex;
     justify-content: space-between;
     padding-top: 22px;
+    margin-right: 20px;
 }
 footer .footer-inner .footer-cont .footer-list .footer-item {
     width: 100%;
