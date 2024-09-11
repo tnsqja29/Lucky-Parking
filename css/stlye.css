@@ -410,6 +410,10 @@ footer .footer-inner .blogo {
     height: 60px;
 }
 
+footer .footer-inner .footer-cont {
+    margin-left: 20px;
+}
+
 footer .footer-inner .footer-cont .mail-box {
     font-size: 20px;
     color: #fff;
